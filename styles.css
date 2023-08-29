@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+    background-image: url('assets/bg.gif');
+    background-position: center;
+    background-size: cover;
+   
+
+  }
+
+.clock {
+    font-size: 12vw;
+    display: flex;
+    margin: auto;
+    font-family: 'VT323', monospace;
+    font-weight: 900;
+    text-shadow: 0 0 6px #00ff41;
+    text-align: center;
+    color: #00ff41;
+    border: 5px double #00ff41  ;
+    border-width: 15px;
+    border-radius: 60px;
+    box-shadow: 0 0 5px #00ff41, /* Inner glow */
+    0 0 10px #00ff41, /* Middle glow */
+    0 0 15px #00ff41, /* Outer glow */
+    0 0 20px #00ff41;  /* Far outer glow */
+    padding: 30px 20px;
+    background-origin: border-box;
+    background-image: url('assets/bg.gif');
+    background-position: center;
+    width: 50%;
+
+  }
+  .digit {
+    overflow: hidden;
+    height: 1em;
+    width: 1em;
+    position: relative;
+  }
+  .flip {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  @keyframes slideOut {
+    0% { top: 0; }
+    100% { top: -1em; }
+  }
+  @keyframes slideIn {
+    0% { top: 1em; }
+    100% { top: 0; }
+  }
+
+  @keyframes blink {
+    0%, 5% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  .colon {
+    animation: blink 1.2s infinite;
+  }
+  
